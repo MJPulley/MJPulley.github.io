@@ -1,2 +1,2 @@
-# MJPulley.github.io
-Group 20 Final Project Speed Cameras
+# Group 20 Final Project Speed Cameras
+https://mjpulley.github.io/
