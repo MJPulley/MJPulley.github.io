@@ -140,8 +140,8 @@ form {
 
 #map {
     display: block;
-    width: 800px;
-    height: 780px;
+    width: 900px;
+    height: 880px;
     border: 2px dashed rgb(99, 99, 99);
     margin-bottom: 1rem;
 }
