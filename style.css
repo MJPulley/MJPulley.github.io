@@ -32,6 +32,38 @@ a {
     text-decoration: none;
 }
 
+.navigation {
+    margin: 0;
+}
+  
+.navigation ul {
+  
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #333;
+}
+  
+.navigation li {
+    float: left;
+}
+  
+.navigation li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 24px;
+}
+  
+  /* Change the link color to #111 (black) on hover */
+.navigation li a:hover {
+    background-color: #111;
+}
+  
+
 h2, h3 {
     margin:0;
     padding:0;
@@ -138,10 +170,14 @@ form {
     text-decoration: none;
 }
 
+/* MAP STYLES */
+
 #map {
     display: block;
-    width: 900px;
-    height: 880px;
+    width: 800px;
+    height: 780px;
     border: 2px dashed rgb(99, 99, 99);
     margin-bottom: 1rem;
 }
+
+#map { height: 180px; }
