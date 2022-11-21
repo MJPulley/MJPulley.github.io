@@ -1,4 +1,4 @@
-function injectHTML() {
+function injectHTML () {
 
 }
 
@@ -17,7 +17,7 @@ function markerPlace(array, map) {
         layer.remove();
     }
   });
-  
+
 array.forEach((item, index) => {
   const {coordinates} = item.geocoded_column_1;
     L.marker([coordinates[1], coordinates[0]]).addTo(map);
