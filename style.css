@@ -138,6 +138,9 @@ form {
     text-decoration: none;
 }
 
+/* MAP STYLES */
+#map { height: 180px; }
+
 #map {
     display: block;
     width: 900px;
