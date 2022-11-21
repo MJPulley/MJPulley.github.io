@@ -158,8 +158,8 @@ form {
 /* MAP STYLES */
 #map {
     display: block;
-    width: 900px;
-    height: 880px;
+    width: 800px;
+    height: 780px;
     border: 2px dashed rgb(99, 99, 99);
     margin-bottom: 1rem;
 }
