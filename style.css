@@ -138,12 +138,28 @@ form {
     text-decoration: none;
 }
 
-/* MAP STYLES */
+@media only screen and (max-width: 736px){
+  
+    .container {
+      background-color: rgba(204, 8, 162, 0.65);
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
 
+    .right_section{
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      justify-content: flex-start;
+    }
+}
+
+/* MAP STYLES */
 #map {
     display: block;
-    width: 800px;
-    height: 900px;
+    width: 900px;
+    height: 880px;
     border: 2px dashed rgb(99, 99, 99);
     margin-bottom: 1rem;
 }
