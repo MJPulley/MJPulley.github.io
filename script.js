@@ -27,6 +27,8 @@ array.forEach((item, index) => {
   });
 }
 
+/****/
+
 const page = initMap();
 
 async function mainEvent() {
