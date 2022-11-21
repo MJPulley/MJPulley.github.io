@@ -8,6 +8,15 @@ function processSpeedCameras(list) {
     return newArray;
   }
 
+  function filterList(list, filterInputValue) {
+    return list.filter((item) => {
+      if (!item.name) { return; }
+      const lowerCaseName = item.name.toLowerCase();
+      const lowerCaseQuery = filterInputValue.toLowerCase();
+      return lowerCaseName.includes(lowerCaseQuery);
+    });
+  }
+
 function initMap() {
     console.log('initMap');
     const map = L.map('map').setView([38.9897, -76.9378], 13);
@@ -35,3 +44,6 @@ function initMap() {
       }
     });
   }
+
+
+  const pageMap = initMap();
