@@ -44,6 +44,5 @@ function initMap() {
       }
     });
   }
-
-
+  
   const pageMap = initMap();
