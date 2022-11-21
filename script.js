@@ -27,7 +27,7 @@ array.forEach((item, index) => {
   });
 }
 
-/** */
+/****/
 
 const page = initMap();
 
