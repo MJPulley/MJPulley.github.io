@@ -138,6 +138,8 @@ form {
     text-decoration: none;
 }
 
+/* MAP STYLES */
+
 #map {
     display: block;
     width: 800px;
@@ -145,3 +147,5 @@ form {
     border: 2px dashed rgb(99, 99, 99);
     margin-bottom: 1rem;
 }
+
+#map { height: 180px; }
