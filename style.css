@@ -143,7 +143,7 @@ form {
 #map {
     display: block;
     width: 800px;
-    height: 780px;
+    height: 900px;
     border: 2px dashed rgb(99, 99, 99);
     margin-bottom: 1rem;
 }
