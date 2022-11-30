@@ -22,10 +22,11 @@ crossorigin=""></script>
     <div class="container">
       <div class="left_segment box">
         <h2>Form Inputs</h2>
-        <form action="/api">
-          <label for="speed"></label>
+        <form action="/api" class="box main_form">
+          <label for="speed">Filter</label>
           <input type="text" name="speed" id="speed"></form>
-          <button type="submit">Search</button>
+          <div class="lds-ellipsis"><div></div><div></div><div></div><div></div></div>
+          <button type="submit" style="display:block;">Search</button>
       </div>
       <div class="right_segment box">
         <h3>PG County Map of Speed Cameras</h3>
