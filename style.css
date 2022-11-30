@@ -30,6 +30,7 @@ body {
 a {
     display: inline-block;
     text-decoration: none;
+    color: #FB4D3D
 }
   
 h2, h3 {
@@ -64,25 +65,42 @@ form {
     padding-left: 1rem;
     padding-right: 1rem;
     padding-bottom: 1.5rem;
+    font-size: 2.5rem;
+    color: #FB4D3D;
 }
 
 .header h1 {
-    display: block;
-    
+  display: flex;
   
-    
-    background-color: #061A40;
-    color: #FB4D3D; 
+  background-color: #061A40;
+  color: #FB4D3D; 
+
+  border: 2px dotted;
+  border-radius: 6px;
+  font-size: 1.5rem;
+  padding: 1.25rem;
+  margin:0; 
+
   
-    
-    border: 2px dotted;
-    border-radius: 6px;
-    font-size: 1.5rem;
-    padding: 1.25rem;
-    margin:0; 
+  box-shadow: 0 0.5em 1em -0.125em rgb(10 10 10 / 10%), 0 0 0 1px rgb(10 10 10 / 2%);
+}
+
+
+.header h1 li {
+  display: flex;
+  list-style-type: none;
+  justify-content: flex-start;
   
-    
-    box-shadow: 0 0.5em 1em -0.125em rgb(10 10 10 / 10%), 0 0 0 1px rgb(10 10 10 / 2%);
+  background-color: #061A40;
+  color: #FB4D3D; 
+
+  font-size: 1.5rem;
+  padding: 1.25rem;
+  margin:0; 
+}
+
+.header h1 a:hover {
+  background-color: gold;
 }
 
 .box {
