@@ -28,7 +28,7 @@ body {
 }
 
 a {
-    display: inline-block;
+    display:inline-flex;
     text-decoration: none;
     color: #FB4D3D
 }
@@ -70,7 +70,9 @@ form {
 }
 
 .header h1 {
-  display: flex;
+  display:flex;
+  list-style: none;
+  flex-direction: row;
   
   background-color: #061A40;
   color: #FB4D3D; 
@@ -85,18 +87,20 @@ form {
   box-shadow: 0 0.5em 1em -0.125em rgb(10 10 10 / 10%), 0 0 0 1px rgb(10 10 10 / 2%);
 }
 
+.header h1 ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+}
 
 .header h1 li {
-  display: flex;
-  list-style-type: none;
-  justify-content: flex-start;
-  
-  background-color: #061A40;
-  color: #FB4D3D; 
-
-  font-size: 1.5rem;
-  padding: 1.25rem;
-  margin:0; 
+  display: block;
+  color: #FB4D3D;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 24px;
 }
 
 .header h1 a:hover {
