@@ -4,20 +4,6 @@ function getRandomIntInclusive(min, max) {
   return Math.floor(Math.random() * (newMax - newMin + 1) + newMin); // The maximum is inclusive and the minimum is inclusive
 }
 
-function injectHTML(list) {
-  console.log('fired injectHTML');
-  const target = document.querySelector('#speedCameras_list');
-  target.innerHTML = '';
-
-  const listEl = document.createElement('ol');
-  target.appendChild(listEl);
-  list.forEach((item) => {
-    const el = document.createElement('li');
-    el.innerText = item.street_address;
-    listEl.appendChild(el);
-  });
-}
-
 function processCameras(list) {
   console.log('speed cameras list');
   const range = [...Array(30).keys()];
@@ -26,15 +12,6 @@ function processCameras(list) {
     return list[index];
   });
   return newArray;
-}
-
-function filterList (list, filterInputValue) {
-  return list.filter((item) => {
-    if (!item.street_address) { return; }
-    const lowerCaseName = item.street_address.toLowerCase();
-    const lowerCaseQuery = filterInputValue.toLowerCase();
-    return lowerCaseName.includes(lowerCaseQuery);
-  });
 }
 
 function initMap() {
@@ -67,6 +44,8 @@ function markerPlace(array, map) {
 
     const address = item.street_address;
     const postedSpeed = item.posted_speed;
+
+    speedCameraMarker.bindPopup(`Address: ${address}<br>Posted Speed: ${postedSpeed}<br>`);
   });
 }
 
