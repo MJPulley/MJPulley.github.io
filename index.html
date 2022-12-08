@@ -16,22 +16,30 @@
   </head>
   <body>
     <div class="wrapper">
-      <header class="header"> 
+      <header class="header">
+        <h1>PG County Speed Cameras</h1>
         <h1>
           <img src="PGClogo.png" width="100" alt="PG County Logo">
-          <li> <h1>PG County Speed Cameras</h1> </li>
           <li><a href="index.html">Home</a></li>
           <li><a href="about.html">About</a></li>
         </h1>
       </header>
       <div class="container">
-        <div class="left_segment box">
+        <div class="center_segment box">
           <form action="/api" class="box main_form">
             <label for="speed">Filter</label>
             <input type="text" name="speed" id="speed">
             <div class="lds-ellipsis"><div></div><div></div><div></div><div></div></div>
             <button type="submit" id="get-resto">Refresh</button>
           </form>
+        </div>
+      </div>
+      <div class="container">
+        <div class="left_segment box">
+          <h3>PG County Regions</h3>
+          <div class="grid">
+            <img class="grid img" src="PGCregions.jpeg" alt="PG County Regions Map"/>
+          </div>
         </div>
         <div class="right_segment box">
           <h3>PG County Map of Speed Cameras</h3>

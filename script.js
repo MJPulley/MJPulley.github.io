@@ -5,13 +5,27 @@ function getRandomIntInclusive(min, max) {
 }
 
 function processCameras(list) {
-  console.log('speed cameras list');
+  console.log('cameras list');
   const range = [...Array(30).keys()];
+  const listIndex = [];
   const newArray = range.map((item) => {
-    const index = getRandomIntInclusive(0, list.length - 1);
+    let index = getRandomIntInclusive(0, list.length - 1);
+    while (listIndex.includes(index)) {
+      index = getRandomIntInclusive(0, list.length - 1);
+    }
+    listIndex.push(index);
     return list[index];
   });
   return newArray;
+}
+
+function filterList (array, filterInputValue) {
+  return array.filter((item) => {
+    if (!item.posted_speed) { return; }
+    const lowerCaseSpeed = item.posted_speed.toLowerCase();
+    const lowerCaseQuery = filterInputValue.toLowerCase();
+    return lowerCaseSpeed.includes(lowerCaseQuery);
+  });
 }
 
 function initMap() {
@@ -44,8 +58,9 @@ function markerPlace(array, map) {
 
     const address = item.street_address;
     const postedSpeed = item.posted_speed;
+    const district = item.district;
 
-    speedCameraMarker.bindPopup(`Address: ${address}<br>Posted Speed: ${postedSpeed}<br>`);
+    speedCameraMarker.bindPopup(`Address: ${address}<br>Posted Speed: ${postedSpeed}<br>District: ${district}`);
   });
 }
 
@@ -53,7 +68,7 @@ async function getData() {
   const url = 'https://data.princegeorgescountymd.gov/resource/mnkf-cu5c.json';
   const data = await fetch(url);
   const json = await data.json();
-  const reply = json.filter((item) => Boolean(item.location_1));
+  const reply = json.filter((item) => Boolean(item.location_1)).filter((item) => Boolean(item.posted_speed));
   return reply;
 }
 
@@ -74,6 +89,13 @@ async function mainEvent() {
 
     let cameraList = [];
 
+    form.addEventListener('input', (event) => {
+      console.log('input', event.target.value);
+      const filteredList = filterList(cameraList, event.target.value);
+      console.log(filteredList);
+      markerPlace(filteredList, pageMap);
+    });
+    
     form.addEventListener('submit', async (submitEvent) => {
       submitEvent.preventDefault();
       cameraList = processCameras(mapData);
