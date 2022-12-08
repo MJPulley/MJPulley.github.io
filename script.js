@@ -4,6 +4,15 @@ function getRandomIntInclusive(min, max) {
   return Math.floor(Math.random() * (newMax - newMin + 1) + newMin); // The maximum is inclusive and the minimum is inclusive
 }
 
+function filterList (array, filterInputValue) {
+  return array.filter((item) => {
+    if (!item.posted_speed) { return; }
+    const lowerCaseSpeed = item.posted_speed.toLowerCase();
+    const lowerCaseQuery = filterInputValue.toLowerCase();
+    return lowerCaseSpeed.includes(lowerCaseQuery);
+  });
+}
+
 function processCameras(list) {
   console.log('cameras list');
   const range = [...Array(30).keys()];
@@ -17,15 +26,6 @@ function processCameras(list) {
     return list[index];
   });
   return newArray;
-}
-
-function filterList (array, filterInputValue) {
-  return array.filter((item) => {
-    if (!item.posted_speed) { return; }
-    const lowerCaseSpeed = item.posted_speed.toLowerCase();
-    const lowerCaseQuery = filterInputValue.toLowerCase();
-    return lowerCaseSpeed.includes(lowerCaseQuery);
-  });
 }
 
 function initMap() {
