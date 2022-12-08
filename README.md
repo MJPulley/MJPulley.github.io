@@ -1,2 +1,2 @@
 # Group 20 Final Project Speed Cameras
-GitHub Pages Link: https://mjpulley.github.io/
+GitHub Pages Link: https://mjpulley.github.io/PGCountySpeedCameras/
